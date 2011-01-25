@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+		<head>
+				  <title>Jasmine Test Runner</title>
+				  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.1/jasmine.css">
+
+				  <!-- libraries -->
+				  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+				  <script type="text/javascript" src="./../jquery.xpath.js"></script>
+				  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine.js"></script>
+				  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine-html.js"></script>
+
+				  <!-- include source files here... -->
+				  <script type="text/javascript" src="./../xpath.js"></script>
+
+				  <!-- include spec files here... -->
+				  <script type="text/javascript" src="spec/SpecXPath.js"></script>
+				  <script type="text/javascript" src="spec/SpecJQueryXPath.js"></script>
+
+		</head>
+		<body>
+				<!-- simple markup for testing -->
+				<h1 class="bookTitle">A very short ebook</h1>
+				<p style="text-align:right">Written by @Me</p>
+				<div class="introduction">
+					<p>A very short <span>ebook</span> to demonstrate the use of XPath.</p>
+				</div>
+
+				<h2 class="chapter">Chapter One</h2>
+				<p>This is a truly fascinating chapter.</p>
+
+				<h2 class="chapter">Chapter Two</h2>
+				<p>A worthy continuation of a fine tradition.</p>
+
+				<!-- jasmine init -->
+				<script type="text/javascript">
+				  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+				  jasmine.getEnv().execute();
+				</script>
+
+		</body>
+</html>
